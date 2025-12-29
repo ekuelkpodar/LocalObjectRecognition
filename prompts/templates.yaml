@@ -1,0 +1,38 @@
+templates:
+  basic_detection:
+    name: "Basic Detection"
+    key: "1"
+    prompt: "Describe all objects you see in this image. List them clearly."
+    description: "Simple object listing"
+
+  detailed_analysis:
+    name: "Detailed Analysis"
+    key: "2"
+    prompt: |
+      Analyze this image and provide:
+      1. All visible objects
+      2. Their approximate locations (left, right, center, top, bottom)
+      3. Any notable actions or interactions
+      Be concise and specific.
+    description: "Detailed object analysis with locations"
+
+  structured_output:
+    name: "Structured Output"
+    key: "3"
+    prompt: |
+      List all objects in this image in the following format:
+      - Object name: [location in frame]
+      Focus on the most prominent objects first.
+    description: "Structured list format"
+
+  scene_understanding:
+    name: "Scene Understanding"
+    key: "4"
+    prompt: "Describe the overall scene, including the setting, main objects, and any activities taking place."
+    description: "High-level scene description"
+
+  count_objects:
+    name: "Count Objects"
+    key: "5"
+    prompt: "Count and list all distinct objects in this image. Provide the count for each type of object."
+    description: "Object counting mode"

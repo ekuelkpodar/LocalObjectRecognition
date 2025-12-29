@@ -1,0 +1,34 @@
+camera:
+  device_index: 0
+  capture_width: 640
+  capture_height: 480
+  fps: 30
+
+model:
+  name: "liuhaotian/llava-v1.5-7b"
+  max_tokens: 150
+  temperature: 0.2
+  top_p: 0.9
+  gpu_memory_util: 0.8
+  max_model_len: 2048
+  dtype: "half"
+
+processing:
+  process_every_n_frames: 3
+  max_queue_size: 5
+  display_width: 1280
+  display_height: 720
+  inference_timeout: 10.0
+
+prompts:
+  default: "Describe all objects you see in this image concisely."
+  detailed: "Analyze this image and provide:\n1. All visible objects\n2. Their approximate locations (left, right, center, top, bottom)\n3. Any notable actions or interactions\nBe concise and specific."
+  structured: "List all objects in this image in the following format:\n- Object name: [location in frame]\nFocus on the most prominent objects first."
+  action: "Describe what is happening in this scene. Focus on actions and interactions."
+  simple: "What objects do you see? List them briefly."
+
+logging:
+  level: "INFO"
+  log_to_file: true
+  log_file: "logs/object_recognition.log"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
